@@ -47,7 +47,7 @@ Dado un archivo de audio (podcast, grabación móvil, conversación informal), e
 
 ## Diagrama 
 
-![Epimeteo ai diagam](./Epimeteo\ AI\ diagrama.png)
+![Epimeteo ai diagam](epimeteo_ai_diagram.png)
 
 ---
 
