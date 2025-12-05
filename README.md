@@ -61,19 +61,16 @@ Dado un archivo de audio (podcast, grabación móvil, conversación informal), e
 
 ## 🧠 Tecnologías
 
-- **Frontend / Client**
+- **Server app**
   - Next.js (React + TypeScript)
 
 - **Speech-to-Text**
   - Whisper (OpenAI)
   - Wrapper Node: https://github.com/ariym/whisper-node  
-  - Modelos locales vía `whisper.cpp`
 
 - **LLM local**
-  - (Tests en proceso) Ollama + modelos LLaMA/Mistral
-
-- **Empaquetado (futuro)**
-  - Electron para crear una aplicación de escritorio totalmente local y simple para usuarios no técnicos.
+  - Llama 
+  - Wrapper Node: https://github.com/withcatai/node-llama-cpp
 
 ---
 
