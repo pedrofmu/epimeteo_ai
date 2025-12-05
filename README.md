@@ -1,76 +1,36 @@
-# Epimeteo AI 
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-📖 **Preservando historias, vidas y memorias.**  
-Epimeteo convierte una conversación grabada en una biografía estructurada.
+## Getting Started
 
----
+First, run the development server:
 
-## 🧩 Propósito
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-Muchas historias familiares desaparecen sin ser contadas.  
-Epimeteo nace para capturarlas fácilmente, sin necesidad de entrevistas formales ni procesos complejos.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-Solo grabas una conversación.  
-La aplicación se encarga del resto.
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
----
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## 🎙️ ¿Qué hace?
+## Learn More
 
-Dado un archivo de audio (podcast, grabación móvil, conversación informal), el sistema:
+To learn more about Next.js, take a look at the following resources:
 
-1. **Transcribe la conversación**  
-   Reconoce el audio y separa automáticamente los distintos hablantes.
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-2. **Identifica al entrevistado**  
-   Y clasifica sus respuestas como bloques de contenido relevantes.
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-3. **Agrupa la información en *temas***  
-   Cada tema contiene:
-   - **Contenido**
-   - **Personajes involucrados**
-   - **Contexto temporal** (si existe)
-   - **Resumen estructurado**
+## Deploy on Vercel
 
-4. **Genera una línea de vida**  
-   Ordenando cronológicamente los eventos clave.
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-5. **Transforma los temas en narrativa**  
-   Con la ayuda de un modelo de lenguaje local, se redactan:
-   - capítulos
-   - resúmenes
-
-6. **Exporta el resultado** *(WIP)*  
-   - 📘 PDF tipo libro  
-
----
-
-## Diagrama 
-
-![Epimeteo ai diagam](epimeteo_ai_diagram.png)
-
----
-
-## 🧠 Tecnologías
-
-- **Frontend / Client**
-  - Next.js (React + TypeScript)
-
-- **Speech-to-Text**
-  - Whisper (OpenAI)
-  - Wrapper Node: https://github.com/ariym/whisper-node  
-  - Modelos locales vía `whisper.cpp`
-
-- **LLM local**
-  - (Tests en proceso) Ollama + modelos LLaMA/Mistral
-
-- **Empaquetado (futuro)**
-  - Electron para crear una aplicación de escritorio totalmente local y simple para usuarios no técnicos.
-
----
-
-## 🤝 Contribuciones
-
-Ideas, preguntas y feedback son bienvenidos mientras el proyecto evoluciona.
-
----
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
