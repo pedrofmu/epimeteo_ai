@@ -7,14 +7,6 @@ Epimeteo convierte una conversación grabada en una biografía estructurada.
 
 ## 🧩 Propósito
 
-
-
-
-
-
-
-
-
 Muchas historias familiares desaparecen sin ser contadas.  
 Epimeteo nace para capturarlas fácilmente, sin necesidad de entrevistas formales ni procesos complejos.
 
@@ -35,10 +27,10 @@ Dado un archivo de audio (podcast, grabación móvil, conversación informal), e
 
 3. **Agrupa la información en *temas***  
    Cada tema contiene:
-   - **Contenido**
+   - **Titulo**
    - **Personajes involucrados**
    - **Contexto temporal** (si existe)
-   - **Resumen estructurado**
+   - **Contenido**
 
 4. **Genera una línea de vida**  
    Ordenando cronológicamente los eventos clave.

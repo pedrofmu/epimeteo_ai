@@ -1,10 +1,15 @@
 :root {
-  --background: #0b1021;
-  --foreground: #f7f7fb;
-  --muted: #b7bdce;
-  --accent: #6cf2c5;
-  --card: rgba(255, 255, 255, 0.04);
-  --border: rgba(255, 255, 255, 0.08);
+  --background: #f6ede3;
+  --foreground: #5a5a5a;
+  --heading: #4a3a31;
+  --muted: #a7b49e;
+  --accent: #c96b53;
+  --accent-secondary: #dfaf47;
+  --accent-hover: #f4c8a4;
+  --support-soft: #d9a6a0;
+  --support-calm: #a7b49e;
+  --card: rgba(217, 166, 160, 0.18);
+  --border: rgba(74, 58, 49, 0.24);
 }
 
 html,
@@ -15,12 +20,23 @@ body {
 
 body {
   color: var(--foreground);
-  background: radial-gradient(circle at 10% 20%, rgba(108, 242, 197, 0.08), transparent 28%),
-    radial-gradient(circle at 90% 10%, rgba(75, 123, 255, 0.12), transparent 32%),
-    linear-gradient(145deg, #050914 0%, #0b1021 40%, #0f1c33 100%);
+  background:
+    radial-gradient(circle at 14% 18%, rgba(201, 107, 83, 0.16), transparent 30%),
+    radial-gradient(circle at 86% 14%, rgba(223, 175, 71, 0.14), transparent 34%),
+    radial-gradient(circle at 24% 78%, rgba(167, 180, 158, 0.2), transparent 36%),
+    linear-gradient(160deg, #f6ede3 0%, #f4c8a4 48%, #f6ede3 100%);
   font-family: var(--font-geist-sans), "Inter", system-ui, -apple-system, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--heading);
 }
 
 * {
@@ -29,7 +45,39 @@ body {
   margin: 0;
 }
 
+::selection {
+  background: var(--accent-hover);
+  color: var(--heading);
+}
+
 a {
-  color: inherit;
+  color: var(--accent);
   text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+a:hover {
+  color: var(--heading);
+  text-shadow: 0 2px 12px rgba(201, 107, 83, 0.3);
+}
+
+button {
+  background: linear-gradient(120deg, var(--accent) 0%, var(--accent-secondary) 100%);
+  color: var(--background);
+  border: 1px solid var(--accent-secondary);
+  border-radius: 12px;
+  padding: 12px 18px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  box-shadow: 0 8px 26px rgba(201, 107, 83, 0.22);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+button:hover {
+  background: var(--accent-hover);
+  color: var(--heading);
+  box-shadow: 0 12px 30px rgba(201, 107, 83, 0.26);
+  transform: translateY(-1px);
 }
