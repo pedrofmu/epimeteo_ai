@@ -47,7 +47,7 @@ export default function AudioUpload() {
 
     return (
         <div className="audio-upload">
-            <label htmlFor="audio-upload-input">Subir archivo de audio:</label>
+            <label htmlFor="audio-upload-input">Subir audio:</label>
             <input
                 id="audio-upload-input"
                 type="file"
