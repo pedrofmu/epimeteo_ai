@@ -1,24 +1,24 @@
-"use client";
+"use client"
 
 import { useState } from "react";
+import {Theme} from "@/types/theme";
 
-type Theme = {
-    title: string;
-    time?: string;
-    characters: Record<number, string>;
-    content: string;
-};
+enum UploadStatus {
+    IDLE = "idle",
+    SUBIENDO = "subiendo",
+    ERROR = "error"
+}
 
 export default function AudioUpload() {
     const [themes, setThemes] = useState<Theme[]>([]);
-    const [status, setStatus] = useState<"idle" | "subiendo" | "error">("idle");
+    const [status, setStatus] = useState<UploadStatus>(UploadStatus.IDLE);
     const [errorMsg, setErrorMsg] = useState<string>("");
 
     const handleFileChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
         const file = e.target.files?.[0];
         if (!file) return;
 
-        setStatus("subiendo");
+        setStatus(UploadStatus.IDLE);
         setErrorMsg("");
         setThemes([]);
 
@@ -38,10 +38,10 @@ export default function AudioUpload() {
 
             const data = await res.json();
             setThemes(data.themes || []);
-            setStatus("idle");
+            setStatus(UploadStatus.IDLE);
         } catch (err: any) {
             setErrorMsg(err.message || "Error desconocido");
-            setStatus("error");
+            setStatus(UploadStatus.ERROR);
         }
     };
 
@@ -73,7 +73,7 @@ export default function AudioUpload() {
                         }}
                     >
                         <h3>{theme.title}</h3>
-                        {theme.time && <p><strong>Tiempo:</strong> {theme.time}</p>}
+                        {theme.time && <p><strong>Tiempo:</strong> {theme.time.toString()}</p>}
                         <div>
                             <strong>Personajes:</strong>
                             <ul>
