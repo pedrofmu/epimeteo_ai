@@ -1,4 +1,4 @@
-import AudioUpload from "@/components/AudioUpload";
+import AudioUpload from "@/pages/AudioUpload";
 import styles from "./page.module.css";
 
 export default function Home() {
@@ -13,7 +13,6 @@ export default function Home() {
             </header>
 
             <main className={styles.main}>
-                {/* Aquí agregamos el componente de subida de audio */}
                 <h2>Subida de Audio</h2>
                 <AudioUpload />
             </main>

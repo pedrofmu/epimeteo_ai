@@ -57,12 +57,12 @@ Dado un archivo de audio (podcast, grabación móvil, conversación informal), e
   - Next.js (React + TypeScript)
 
 - **Speech-to-Text**
-  - Whisper (OpenAI)
-  - Wrapper Node: https://github.com/ariym/whisper-node  
+  - Mistral STT
+  - API Specs: https://docs.mistral.ai/
 
-- **LLM local**
-  - Llama 
-  - Wrapper Node: https://github.com/withcatai/node-llama-cpp
+- **LLM**
+  - Mistral LLM
+  - Api Specs: https://docs.mistral.ai/
 
 ---
 
